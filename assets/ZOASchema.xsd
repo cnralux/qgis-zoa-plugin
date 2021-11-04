@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://www.interlis.ch/INTERLIS2.3/GML32/ZOA_TA"
+  targetNamespace="http://www.interlis.ch/INTERLIS2.3/GML32/ZOA_TA"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:INTERLIS="http://www.interlis.ch/INTERLIS2.3/GML32/INTERLIS"
+  xmlns:ili2c="http://www.interlis.ch/ili2c"
+  >
+<xsd:annotation>
+  <xsd:appinfo source="http://www.interlis.ch/ili2c/ili2cversion">5.1.4-74358b39131185c7a0b8dd2e9c5a5b548a9f385a</xsd:appinfo>
+  <xsd:appinfo source="http://www.interlis.ch/ili2c">
+    <ili2c:model>ZOA_TA</ili2c:model>
+    <ili2c:modelVersion>2021-11-08</ili2c:modelVersion>
+    <ili2c:modelAt>mailto:ta-upload@cnra.etat.lu</ili2c:modelAt>
+  </xsd:appinfo>
+</xsd:annotation>
+<xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+<xsd:import namespace="http://www.interlis.ch/INTERLIS2.3/GML32/INTERLIS" schemaLocation="iligml.xsd"/>
+<xsd:complexType name="LUREF">
+  <xsd:complexContent>
+    <xsd:restriction base="gml:PointPropertyType">
+      <xsd:sequence>
+        <xsd:element ref="gml:Point"/>
+      </xsd:sequence>
+    </xsd:restriction>
+  </xsd:complexContent>
+</xsd:complexType>
+<xsd:element name="ZOA_GESTION" type="ZOA_GESTIONType" substitutionGroup="gml:AbstractFeature"/>
+<xsd:complexType  name="ZOA_GESTIONType">
+  <xsd:complexContent>
+    <xsd:extension base="gml:AbstractFeatureType">
+      <xsd:sequence>
+        <xsd:element name="ID_COMMUNE">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:normalizedString">
+              <xsd:enumeration value="L0101"/>
+              <xsd:enumeration value="L0102"/>
+              <xsd:enumeration value="L0103"/>
+              <xsd:enumeration value="L0104"/>
+              <xsd:enumeration value="L0105"/>
+              <xsd:enumeration value="L0106"/>
+              <xsd:enumeration value="L0107"/>
+              <xsd:enumeration value="L0108"/>
+              <xsd:enumeration value="L0110"/>
+              <xsd:enumeration value="L0201"/>
+              <xsd:enumeration value="L0202"/>
+              <xsd:enumeration value="L0203"/>
+              <xsd:enumeration value="L0204"/>
+              <xsd:enumeration value="L0205"/>
+              <xsd:enumeration value="L0206"/>
+              <xsd:enumeration value="L0207"/>
+              <xsd:enumeration value="L0208"/>
+              <xsd:enumeration value="L0209"/>
+              <xsd:enumeration value="L0210"/>
+              <xsd:enumeration value="L0211"/>
+              <xsd:enumeration value="L0212"/>
+              <xsd:enumeration value="L0213"/>
+              <xsd:enumeration value="L0214"/>
+              <xsd:enumeration value="L0301"/>
+              <xsd:enumeration value="L0302"/>
+              <xsd:enumeration value="L0303"/>
+              <xsd:enumeration value="L0304"/>
+              <xsd:enumeration value="L0305"/>
+              <xsd:enumeration value="L0306"/>
+              <xsd:enumeration value="L0307"/>
+              <xsd:enumeration value="L0308"/>
+              <xsd:enumeration value="L0309"/>
+              <xsd:enumeration value="L0310"/>
+              <xsd:enumeration value="L0311"/>
+              <xsd:enumeration value="L0401"/>
+              <xsd:enumeration value="L0402"/>
+              <xsd:enumeration value="L0403"/>
+              <xsd:enumeration value="L0404"/>
+              <xsd:enumeration value="L0405"/>
+              <xsd:enumeration value="L0406"/>
+              <xsd:enumeration value="L0407"/>
+              <xsd:enumeration value="L0408"/>
+              <xsd:enumeration value="L0409"/>
+              <xsd:enumeration value="L0410"/>
+              <xsd:enumeration value="L0501"/>
+              <xsd:enumeration value="L0502"/>
+              <xsd:enumeration value="L0503"/>
+              <xsd:enumeration value="L0504"/>
+              <xsd:enumeration value="L0505"/>
+              <xsd:enumeration value="L0601"/>
+              <xsd:enumeration value="L0602"/>
+              <xsd:enumeration value="L0603"/>
+              <xsd:enumeration value="L0604"/>
+              <xsd:enumeration value="L0605"/>
+              <xsd:enumeration value="L0606"/>
+              <xsd:enumeration value="L0607"/>
+              <xsd:enumeration value="L0608"/>
+              <xsd:enumeration value="L0609"/>
+              <xsd:enumeration value="L0610"/>
+              <xsd:enumeration value="L0701"/>
+              <xsd:enumeration value="L0702"/>
+              <xsd:enumeration value="L0703"/>
+              <xsd:enumeration value="L0704"/>
+              <xsd:enumeration value="L0705"/>
+              <xsd:enumeration value="L0706"/>
+              <xsd:enumeration value="L0707"/>
+              <xsd:enumeration value="L0708"/>
+              <xsd:enumeration value="L0709"/>
+              <xsd:enumeration value="L0710"/>
+              <xsd:enumeration value="L0801"/>
+              <xsd:enumeration value="L0802"/>
+              <xsd:enumeration value="L0804"/>
+              <xsd:enumeration value="L0805"/>
+              <xsd:enumeration value="L0806"/>
+              <xsd:enumeration value="L0807"/>
+              <xsd:enumeration value="L0808"/>
+              <xsd:enumeration value="L0901"/>
+              <xsd:enumeration value="L0902"/>
+              <xsd:enumeration value="L0903"/>
+              <xsd:enumeration value="L1001"/>
+              <xsd:enumeration value="L1002"/>
+              <xsd:enumeration value="L1003"/>
+              <xsd:enumeration value="L1004"/>
+              <xsd:enumeration value="L1005"/>
+              <xsd:enumeration value="L1006"/>
+              <xsd:enumeration value="L1008"/>
+              <xsd:enumeration value="L1101"/>
+              <xsd:enumeration value="L1102"/>
+              <xsd:enumeration value="L1103"/>
+              <xsd:enumeration value="L1104"/>
+              <xsd:enumeration value="L1105"/>
+              <xsd:enumeration value="L1106"/>
+              <xsd:enumeration value="L1107"/>
+              <xsd:enumeration value="L1108"/>
+              <xsd:enumeration value="L1201"/>
+              <xsd:enumeration value="L1202"/>
+              <xsd:enumeration value="L1203"/>
+              <xsd:enumeration value="L1204"/>
+              <xsd:enumeration value="L1205"/>
+              <xsd:enumeration value="L1206"/>
+              <xsd:enumeration value="L1207"/>
+              <xsd:enumeration value="L1208"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="NOM_FOURNISSEUR">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:normalizedString">
+              <xsd:maxLength value="70"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="DATE_CREATION">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:date">
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="OBJET">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:normalizedString">
+              <xsd:enumeration value="modification"/>
+              <xsd:enumeration value="update"/>
+              <xsd:enumeration value="nouveau"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="DESCRIPTION">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="ID_TA">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:integer">
+              <xsd:minInclusive value="0"/>
+              <xsd:maxInclusive value="99999999"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:extension>
+  </xsd:complexContent>
+</xsd:complexType>
+<xsd:complexType name="GESTIONMemberType">
+  <xsd:complexContent>
+    <xsd:extension base="gml:AbstractFeatureMemberType">
+      <xsd:sequence>
+        <xsd:choice>
+          <xsd:element ref="ZOA_GESTION"/>
+        </xsd:choice>
+      </xsd:sequence>
+    </xsd:extension>
+  </xsd:complexContent>
+</xsd:complexType>
+<xsd:element name="GESTION" type="GESTIONType" substitutionGroup="gml:AbstractFeature"/>
+<xsd:complexType name="GESTIONType">
+  <xsd:complexContent>
+    <xsd:extension base="gml:AbstractFeatureType">
+      <xsd:sequence>
+        <xsd:element name="member" type="GESTIONMemberType" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="gml:AggregationAttributeGroup"/>
+    </xsd:extension>
+  </xsd:complexContent>
+</xsd:complexType>
+<xsd:element name="ZOA_MODIFICATION" type="ZOA_MODIFICATIONType" substitutionGroup="gml:AbstractFeature"/>
+<xsd:complexType  name="ZOA_MODIFICATIONType">
+  <xsd:complexContent>
+    <xsd:extension base="gml:AbstractFeatureType">
+      <xsd:sequence>
+        <xsd:element name="DATE_MODIF">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:date">
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="GEOMETRIE" type="gml:SurfacePropertyType">
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:extension>
+  </xsd:complexContent>
+</xsd:complexType>
+<xsd:element name="ZOA_TERRAIN_AMENAGE_LIGNE" type="ZOA_TERRAIN_AMENAGE_LIGNEType" substitutionGroup="gml:AbstractFeature"/>
+<xsd:complexType  name="ZOA_TERRAIN_AMENAGE_LIGNEType">
+  <xsd:complexContent>
+    <xsd:extension base="gml:AbstractFeatureType">
+      <xsd:sequence>
+        <xsd:element name="GEOMETRIE" type="gml:CurvePropertyType">
+        </xsd:element>
+        <xsd:element name="CATEGORIE">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:normalizedString">
+              <xsd:enumeration value="Cat1"/>
+              <xsd:enumeration value="Cat2.SubCat1"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="NOM_FICHIER" minOccurs="0">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:normalizedString">
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="GENRE" minOccurs="0">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:normalizedString">
+              <xsd:maxLength value="20"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="PROFONDEUR_AMENAGEE">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:decimal">
+              <xsd:minInclusive value="0.00"/>
+              <xsd:maxInclusive value="100.00"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="DESCRIPTION" minOccurs="0">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="ID_TA_LIGNE">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:integer">
+              <xsd:minInclusive value="0"/>
+              <xsd:maxInclusive value="99999999"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:extension>
+  </xsd:complexContent>
+</xsd:complexType>
+<xsd:element name="ZOA_TERRAIN_AMENAGE_POINT" type="ZOA_TERRAIN_AMENAGE_POINTType" substitutionGroup="gml:AbstractFeature"/>
+<xsd:complexType  name="ZOA_TERRAIN_AMENAGE_POINTType">
+  <xsd:complexContent>
+    <xsd:extension base="gml:AbstractFeatureType">
+      <xsd:sequence>
+        <xsd:element name="GEOMETRIE" type="LUREF"/>
+        <xsd:element name="CATEGORIE">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:normalizedString">
+              <xsd:enumeration value="Cat2.SubCat1"/>
+              <xsd:enumeration value="Cat1"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="NOM_FICHIER" minOccurs="0">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:normalizedString">
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="GENRE" minOccurs="0">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:normalizedString">
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="PROFONDEUR_AMENAGEE">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:decimal">
+              <xsd:minInclusive value="0.00"/>
+              <xsd:maxInclusive value="100.00"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="DESCRIPTION" minOccurs="0">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="ID_TA_POINT">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:integer">
+              <xsd:minInclusive value="0"/>
+              <xsd:maxInclusive value="99999999"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:extension>
+  </xsd:complexContent>
+</xsd:complexType>
+<xsd:element name="ZOA_TERRAIN_AMENAGE_POLY" type="ZOA_TERRAIN_AMENAGE_POLYType" substitutionGroup="gml:AbstractFeature"/>
+<xsd:complexType  name="ZOA_TERRAIN_AMENAGE_POLYType">
+  <xsd:complexContent>
+    <xsd:extension base="gml:AbstractFeatureType">
+      <xsd:sequence>
+        <xsd:element name="GEOMETRIE" type="gml:SurfacePropertyType">
+        </xsd:element>
+        <xsd:element name="CATEGORIE">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:normalizedString">
+              <xsd:enumeration value="Cat2.SubCat1"/>
+              <xsd:enumeration value="Cat1"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="NOM_FICHIER" minOccurs="0">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:normalizedString">
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="GENRE" minOccurs="0">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:normalizedString">
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="PROFONDEUR_AMENAGEE">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:decimal">
+              <xsd:minInclusive value="0.00"/>
+              <xsd:maxInclusive value="100.00"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="DESCRIPTION" minOccurs="0">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="ID_TA_POLY">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:integer">
+              <xsd:minInclusive value="0"/>
+              <xsd:maxInclusive value="99999999"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:extension>
+  </xsd:complexContent>
+</xsd:complexType>
+<xsd:complexType name="ZOA_TAMemberType">
+  <xsd:complexContent>
+    <xsd:extension base="gml:AbstractFeatureMemberType">
+      <xsd:sequence>
+        <xsd:choice>
+          <xsd:element ref="ZOA_MODIFICATION"/>
+          <xsd:element ref="ZOA_TERRAIN_AMENAGE_LIGNE"/>
+          <xsd:element ref="ZOA_TERRAIN_AMENAGE_POINT"/>
+          <xsd:element ref="ZOA_TERRAIN_AMENAGE_POLY"/>
+        </xsd:choice>
+      </xsd:sequence>
+    </xsd:extension>
+  </xsd:complexContent>
+</xsd:complexType>
+<xsd:element name="ZOA_TA" type="ZOA_TAType" substitutionGroup="gml:AbstractFeature"/>
+<xsd:complexType name="ZOA_TAType">
+  <xsd:complexContent>
+    <xsd:extension base="gml:AbstractFeatureType">
+      <xsd:sequence>
+        <xsd:element name="member" type="ZOA_TAMemberType" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+      <xsd:attributeGroup ref="gml:AggregationAttributeGroup"/>
+    </xsd:extension>
+  </xsd:complexContent>
+</xsd:complexType>
+</xsd:schema>

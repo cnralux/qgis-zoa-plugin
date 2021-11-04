@@ -1,0 +1,429 @@
+INTERLIS 2.3;
+
+MODEL ZOA_TA (en)
+AT "mailto:ta-upload@cnra.etat.lu"
+VERSION "2021-11-08"  =
+
+  DOMAIN
+
+    !!@ CRS=2169
+    LUREF = COORD 45000 .. 110000, 55000.00 .. 140000.00 ,ROTATION 2 -> 1;
+
+  /** Informations sur le TA concernant le transfert en cours
+   */
+  TOPIC GESTION =
+
+    CLASS ZOA_GESTION =
+      ID_COMMUNE (FINAL) : MANDATORY (
+        /** Dippach
+         */
+        L0101,
+        /** Garnich
+         */
+        L0102,
+        /** Habscht
+         */
+        L0103,
+        /** Käerjeng
+         */
+        L0104,
+        /** Kehlen
+         */
+        L0105,
+        /** Koerich
+         */
+        L0106,
+        /** Kopstal
+         */
+        L0107,
+        /** Mamer
+         */
+        L0108,
+        /** Steinfort
+         */
+        L0110,
+        /** Bettembourg
+         */
+        L0201,
+        /** Differdange
+         */
+        L0202,
+        /** Dudelange
+         */
+        L0203,
+        /** Esch-sur-Alzette
+         */
+        L0204,
+        /** Frisange
+         */
+        L0205,
+        /** Kayl
+         */
+        L0206,
+        /** Leudelange
+         */
+        L0207,
+        /** Mondercange
+         */
+        L0208,
+        /** Pétange
+         */
+        L0209,
+        /** Reckange-sur-Mess
+         */
+        L0210,
+        /** Roeser
+         */
+        L0211,
+        /** Rumelange
+         */
+        L0212,
+        /** Sanem
+         */
+        L0213,
+        /** Schifflange
+         */
+        L0214,
+        /** Bertrange
+         */
+        L0301,
+        /** Contern
+         */
+        L0302,
+        /** Hesperange
+         */
+        L0303,
+        /** Luxembourg
+         */
+        L0304,
+        /** Niederanven
+         */
+        L0305,
+        /** Sandweiler
+         */
+        L0306,
+        /** Schuttrange
+         */
+        L0307,
+        /** Steinsel
+         */
+        L0308,
+        /** Strassen
+         */
+        L0309,
+        /** Walferdange
+         */
+        L0310,
+        /** Weiler-la-Tour
+         */
+        L0311,
+        /** Colmar-Berg
+         */
+        L0401,
+        /** Bissen
+         */
+        L0402,
+        /** Helperknapp
+         */
+        L0403,
+        /** Fischbach
+         */
+        L0404,
+        /** Heffingen
+         */
+        L0405,
+        /** Larochette
+         */
+        L0406,
+        /** Lintgen
+         */
+        L0407,
+        /** Lorentzweiler
+         */
+        L0408,
+        /** Mersch
+         */
+        L0409,
+        /** Nommern
+         */
+        L0410,
+        /** Clervaux
+         */
+        L0501,
+        /** Wincrange
+         */
+        L0502,
+        /** Parc Hosingen
+         */
+        L0503,
+        /** Troisvierges
+         */
+        L0504,
+        /** Weiswampach
+         */
+        L0505,
+        /** Bettendorf
+         */
+        L0601,
+        /** Bourscheid
+         */
+        L0602,
+        /** Diekirch
+         */
+        L0603,
+        /** Erpeldange-sur-Sûre
+         */
+        L0604,
+        /** Ettelbruck
+         */
+        L0605,
+        /** Feulen
+         */
+        L0606,
+        /** Mertzig
+         */
+        L0607,
+        /** Reisdorf
+         */
+        L0608,
+        /** Schieren
+         */
+        L0609,
+        /** Vallée de l'Ernz
+         */
+        L0610,
+        /** Beckerich
+         */
+        L0701,
+        /** Preizerdaul
+         */
+        L0702,
+        /** Ell
+         */
+        L0703,
+        /** Rambrouch
+         */
+        L0704,
+        /** Grosbous
+         */
+        L0705,
+        /** Redange-sur-Attert
+         */
+        L0706,
+        /** Saeul
+         */
+        L0707,
+        /** Useldange
+         */
+        L0708,
+        /** Vichten
+         */
+        L0709,
+        /** Wahl
+         */
+        L0710,
+        /** Boulaide
+         */
+        L0801,
+        /** Esch-sur-Sûre
+         */
+        L0802,
+        /** Goesdorf
+         */
+        L0804,
+        /** Kiischpelt
+         */
+        L0805,
+        /** Lac de la Haute-Sûre
+         */
+        L0806,
+        /** Wiltz
+         */
+        L0807,
+        /** Winseler
+         */
+        L0808,
+        /** Tandel
+         */
+        L0901,
+        /** Putscheid
+         */
+        L0902,
+        /** Vianden
+         */
+        L0903,
+        /** Beaufort
+         */
+        L1001,
+        /** Bech
+         */
+        L1002,
+        /** Berdorf
+         */
+        L1003,
+        /** Consdorf
+         */
+        L1004,
+        /** Echternach
+         */
+        L1005,
+        /** Rosport-Mompach
+         */
+        L1006,
+        /** Waldbillig
+         */
+        L1008,
+        /** Betzdorf
+         */
+        L1101,
+        /** Biwer
+         */
+        L1102,
+        /** Flaxweiler
+         */
+        L1103,
+        /** Grevenmacher
+         */
+        L1104,
+        /** Junglinster
+         */
+        L1105,
+        /** Manternach
+         */
+        L1106,
+        /** Mertert
+         */
+        L1107,
+        /** Wormeldange
+         */
+        L1108,
+        /** Bous
+         */
+        L1201,
+        /** Dalheim
+         */
+        L1202,
+        /** Lenningen
+         */
+        L1203,
+        /** Mondorf-les-Bains
+         */
+        L1204,
+        /** Remich
+         */
+        L1205,
+        /** Schengen
+         */
+        L1206,
+        /** Stadtbredimus
+         */
+        L1207,
+        /** Waldbredimus
+         */
+        L1208
+      );
+      NOM_FOURNISSEUR : MANDATORY TEXT*70;
+      DATE_CREATION : MANDATORY FORMAT INTERLIS.XMLDate "2021-1-1" .. "2050-12-31";
+      OBJET (FINAL) : MANDATORY (
+        modification,
+        update,
+        nouveau
+      );
+      DESCRIPTION : MANDATORY MTEXT;
+      ID_TA : MANDATORY 0 .. 99999999;
+    END ZOA_GESTION;
+
+  END GESTION;
+
+  /** Contient les éléments relevant pour la création de la ZOA
+   */
+  TOPIC ZOA_TA =
+    DEPENDS ON ZOA_TA.GESTION;
+
+    /** Limites de la modification ponctuelle de la ZOA
+     */
+    CLASS ZOA_MODIFICATION =
+      /** Date de la modification
+       */
+      DATE_MODIF : MANDATORY FORMAT INTERLIS.XMLDate "2021-1-1" .. "2050-12-31";
+      /** Limites de la modification ZOA
+       */
+      !!@ CRS=2169
+      GEOMETRIE : MANDATORY SURFACE WITH (STRAIGHTS) VERTEX ZOA_TA.LUREF WITHOUT OVERLAPS>1;
+    END ZOA_MODIFICATION;
+
+    /** Terrain aménagé (ligne)
+     */
+    CLASS ZOA_TERRAIN_AMENAGE_LIGNE =
+      !!@ CRS=2169
+      GEOMETRIE : MANDATORY POLYLINE WITH (STRAIGHTS) VERTEX ZOA_TA.LUREF;
+      CATEGORIE (FINAL) : MANDATORY (
+        /** Catégorie 1 à définir
+         */
+        Cat1,
+        /** Catégorie 2 à définir
+         */
+        Cat2(
+          /** Sous-Catégorie 2.1 à définir
+           */
+          SubCat1
+        )
+      );
+      NOM_FICHIER : TEXT;
+      GENRE : TEXT*20;
+      PROFONDEUR_AMENAGEE : MANDATORY 0.00 .. 100.00;
+      DESCRIPTION : MTEXT;
+      ID_TA_LIGNE : MANDATORY 0 .. 99999999;
+    END ZOA_TERRAIN_AMENAGE_LIGNE;
+
+    /** Terrain aménagé (point)
+     */
+    CLASS ZOA_TERRAIN_AMENAGE_POINT =
+      !!@ CRS=2169
+      GEOMETRIE : MANDATORY ZOA_TA.LUREF;
+      CATEGORIE (FINAL) : MANDATORY (
+        /** Catégorie 2 à définir
+         */
+        Cat2(
+          /** Sous-Catégorie 2.1 à définir
+           */
+          SubCat1
+        ),
+        /** Catégorie 1 à définir
+         */
+        Cat1
+      );
+      NOM_FICHIER : TEXT;
+      GENRE : TEXT;
+      PROFONDEUR_AMENAGEE : MANDATORY 0.00 .. 100.00;
+      DESCRIPTION : MTEXT;
+      ID_TA_POINT : MANDATORY 0 .. 99999999;
+    END ZOA_TERRAIN_AMENAGE_POINT;
+
+    /** Terrain aménagé (polygone)
+     */
+    CLASS ZOA_TERRAIN_AMENAGE_POLY =
+      !!@ CRS=2169
+      GEOMETRIE : MANDATORY SURFACE WITH (STRAIGHTS) VERTEX ZOA_TA.LUREF WITHOUT OVERLAPS>0;
+      CATEGORIE (FINAL) : MANDATORY (
+        /** Catégorie 2 à définir
+         */
+        Cat2(
+          /** Sous-Catégorie 2.1 à définir
+           */
+          SubCat1
+        ),
+        /** Catégorie 1 à définir
+         */
+        Cat1
+      );
+      NOM_FICHIER : TEXT;
+      GENRE : TEXT;
+      PROFONDEUR_AMENAGEE : MANDATORY 0.00 .. 100.00;
+      DESCRIPTION : MTEXT;
+      ID_TA_POLY : MANDATORY 0 .. 99999999;
+    END ZOA_TERRAIN_AMENAGE_POLY;
+
+  END ZOA_TA;
+
+END ZOA_TA.

@@ -1,0 +1,43 @@
+{
+  "Name": "Root",
+  "IsGroup": true,
+  "TableName": "",
+  "Nodes": [
+    {
+      "Name": "ZOA Modification",
+      "IsGroup": false,
+      "TableName": "ZOA_TA.ZOA_MODIFICATION",
+      "Nodes": []
+    },
+    {
+      "Name": "Zone d'observation archéologique (ZOA)",
+      "IsGroup": true,
+      "TableName": "",
+      "Nodes": [
+        {
+          "Name": "ZOA_TERRAIN_AMENAGE_POINT",
+          "IsGroup": false,
+          "TableName": "ZOA_TA.ZOA_TERRAIN_AMENAGE_POINT",
+          "Nodes": []
+        },
+        {
+          "Name": "ZOA_TERRAIN_AMENAGE_LIGNE",
+          "IsGroup": false,
+          "TableName": "ZOA_TA.ZOA_TERRAIN_AMENAGE_LIGNE",
+          "Nodes": []
+        },
+        {
+          "Name": "ZOA_TERRAIN_AMENAGE_POLY",
+          "IsGroup": false,
+          "TableName": "ZOA_TA.ZOA_TERRAIN_AMENAGE_POLY",
+          "Nodes": []
+        }]
+    },
+    {
+      "Name": "Gestion",
+      "IsGroup": false,
+      "TableName": "GESTION.ZOA_GESTION",
+      "Nodes": []
+    }
+  ]
+}

@@ -273,7 +273,7 @@ class Project(QObject):
         # Create database if not exist
         if createdb:
             cursor = conn.cursor()
-            cursor.execute("SELECT InitSpatialMetadata()")
+            cursor.execute("SELECT InitSpatialMetadata(1)")
             del cursor
 
         # Check and update tables
@@ -688,7 +688,7 @@ class Project(QObject):
             editor = 'Range'
             config = {
                 'AllowNull': True,
-                'Max': 10000,
+                'Max': 100.00,
                 'Min': 0,
                 'Precision': 3,
                 'Step': 0.1,

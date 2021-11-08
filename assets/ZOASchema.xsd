@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xsd:schema
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  xmlns="http://www.interlis.ch/INTERLIS2.3/GML32/ZOA_TA"
-  targetNamespace="http://www.interlis.ch/INTERLIS2.3/GML32/ZOA_TA"
-  elementFormDefault="qualified"
-  attributeFormDefault="unqualified"
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://www.interlis.ch/INTERLIS2.3/GML32/ZOA_TA" targetNamespace="http://www.interlis.ch/INTERLIS2.3/GML32/ZOA_TA" elementFormDefault="qualified" attributeFormDefault="unqualified"
   xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:INTERLIS="http://www.interlis.ch/INTERLIS2.3/GML32/INTERLIS"
   xmlns:ili2c="http://www.interlis.ch/ili2c"
@@ -17,8 +13,8 @@
     <ili2c:modelAt>mailto:ta-upload@cnra.etat.lu</ili2c:modelAt>
   </xsd:appinfo>
 </xsd:annotation>
-<xsd:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-<xsd:import namespace="http://www.interlis.ch/INTERLIS2.3/GML32/INTERLIS" schemaLocation="iligml.xsd"/>
+<xsd:import namespace="http://www.opengis.net/gml/3.2"/>
+<xsd:import namespace="http://www.interlis.ch/INTERLIS2.3/GML32/INTERLIS"/>
 <xsd:complexType name="LUREF">
   <xsd:complexContent>
     <xsd:restriction base="gml:PointPropertyType">
@@ -157,9 +153,8 @@
         <xsd:element name="OBJET">
           <xsd:simpleType>
             <xsd:restriction base="xsd:normalizedString">
-              <xsd:enumeration value="modification"/>
-              <xsd:enumeration value="update"/>
               <xsd:enumeration value="nouveau"/>
+              <xsd:enumeration value="modification"/>
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
@@ -230,12 +225,14 @@
         <xsd:element name="CATEGORIE">
           <xsd:simpleType>
             <xsd:restriction base="xsd:normalizedString">
-              <xsd:enumeration value="Cat1"/>
-              <xsd:enumeration value="Cat2.SubCat1"/>
+              <xsd:enumeration value="Amenagement"/>
+              <xsd:enumeration value="Bati"/>
+              <xsd:enumeration value="Infrastructure"/>
+              <xsd:enumeration value="Autre"/>
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="NOM_FICHIER" minOccurs="0">
+        <xsd:element name="NOM_FICHIER">
           <xsd:simpleType>
             <xsd:restriction base="xsd:normalizedString">
             </xsd:restriction>
@@ -248,7 +245,15 @@
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="PROFONDEUR_AMENAGEE">
+        <xsd:element name="MIN_PROFONDEUR_AMENAGEE">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:decimal">
+              <xsd:minInclusive value="0.00"/>
+              <xsd:maxInclusive value="100.00"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="MAX_PROFONDEUR_AMENAGEE">
           <xsd:simpleType>
             <xsd:restriction base="xsd:decimal">
               <xsd:minInclusive value="0.00"/>
@@ -283,12 +288,14 @@
         <xsd:element name="CATEGORIE">
           <xsd:simpleType>
             <xsd:restriction base="xsd:normalizedString">
-              <xsd:enumeration value="Cat2.SubCat1"/>
-              <xsd:enumeration value="Cat1"/>
+              <xsd:enumeration value="Amenagement"/>
+              <xsd:enumeration value="Bati"/>
+              <xsd:enumeration value="Infrastructure"/>
+              <xsd:enumeration value="Autre"/>
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="NOM_FICHIER" minOccurs="0">
+        <xsd:element name="NOM_FICHIER">
           <xsd:simpleType>
             <xsd:restriction base="xsd:normalizedString">
             </xsd:restriction>
@@ -300,7 +307,15 @@
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="PROFONDEUR_AMENAGEE">
+        <xsd:element name="MIN_PROFONDEUR_AMENAGEE">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:decimal">
+              <xsd:minInclusive value="0.00"/>
+              <xsd:maxInclusive value="100.00"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="MAX_PROFONDEUR_AMENAGEE">
           <xsd:simpleType>
             <xsd:restriction base="xsd:decimal">
               <xsd:minInclusive value="0.00"/>
@@ -336,12 +351,14 @@
         <xsd:element name="CATEGORIE">
           <xsd:simpleType>
             <xsd:restriction base="xsd:normalizedString">
-              <xsd:enumeration value="Cat2.SubCat1"/>
-              <xsd:enumeration value="Cat1"/>
+              <xsd:enumeration value="Amenagement"/>
+              <xsd:enumeration value="Bati"/>
+              <xsd:enumeration value="Infrastructure"/>
+              <xsd:enumeration value="Autre"/>
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="NOM_FICHIER" minOccurs="0">
+        <xsd:element name="NOM_FICHIER">
           <xsd:simpleType>
             <xsd:restriction base="xsd:normalizedString">
             </xsd:restriction>
@@ -353,7 +370,15 @@
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="PROFONDEUR_AMENAGEE">
+        <xsd:element name="MIN_PROFONDEUR_AMENAGEE">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:decimal">
+              <xsd:minInclusive value="0.00"/>
+              <xsd:maxInclusive value="100.00"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="MAX_PROFONDEUR_AMENAGEE">
           <xsd:simpleType>
             <xsd:restriction base="xsd:decimal">
               <xsd:minInclusive value="0.00"/>

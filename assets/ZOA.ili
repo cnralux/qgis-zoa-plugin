@@ -325,9 +325,8 @@ VERSION "2021-11-08"  =
       NOM_FOURNISSEUR : MANDATORY TEXT*70;
       DATE_CREATION : MANDATORY FORMAT INTERLIS.XMLDate "2021-1-1" .. "2050-12-31";
       OBJET (FINAL) : MANDATORY (
-        modification,
-        update,
-        nouveau
+        nouveau,
+        modification
       );
       DESCRIPTION : MANDATORY MTEXT;
       ID_TA : MANDATORY 0 .. 99999999;
@@ -358,20 +357,15 @@ VERSION "2021-11-08"  =
       !!@ CRS=2169
       GEOMETRIE : MANDATORY POLYLINE WITH (STRAIGHTS) VERTEX ZOA_TA.LUREF;
       CATEGORIE (FINAL) : MANDATORY (
-        /** Catégorie 1 à définir
-         */
-        Cat1,
-        /** Catégorie 2 à définir
-         */
-        Cat2(
-          /** Sous-Catégorie 2.1 à définir
-           */
-          SubCat1
-        )
+        Amenagement,
+        Bati,
+        Infrastructure,
+        Autre
       );
-      NOM_FICHIER : TEXT;
+      NOM_FICHIER : MANDATORY TEXT;
       GENRE : TEXT*20;
-      PROFONDEUR_AMENAGEE : MANDATORY 0.00 .. 100.00;
+      MIN_PROFONDEUR_AMENAGEE : MANDATORY 0.00 .. 100.00;
+      MAX_PROFONDEUR_AMENAGEE : MANDATORY 0.00 .. 100.00;
       DESCRIPTION : MTEXT;
       ID_TA_LIGNE : MANDATORY 0 .. 99999999;
     END ZOA_TERRAIN_AMENAGE_LIGNE;
@@ -382,20 +376,15 @@ VERSION "2021-11-08"  =
       !!@ CRS=2169
       GEOMETRIE : MANDATORY ZOA_TA.LUREF;
       CATEGORIE (FINAL) : MANDATORY (
-        /** Catégorie 2 à définir
-         */
-        Cat2(
-          /** Sous-Catégorie 2.1 à définir
-           */
-          SubCat1
-        ),
-        /** Catégorie 1 à définir
-         */
-        Cat1
+        Amenagement,
+        Bati,
+        Infrastructure,
+        Autre
       );
-      NOM_FICHIER : TEXT;
+      NOM_FICHIER : MANDATORY TEXT;
       GENRE : TEXT;
-      PROFONDEUR_AMENAGEE : MANDATORY 0.00 .. 100.00;
+      MIN_PROFONDEUR_AMENAGEE : MANDATORY 0.00 .. 100.00;
+      MAX_PROFONDEUR_AMENAGEE : MANDATORY 0.00 .. 100.00;
       DESCRIPTION : MTEXT;
       ID_TA_POINT : MANDATORY 0 .. 99999999;
     END ZOA_TERRAIN_AMENAGE_POINT;
@@ -406,20 +395,15 @@ VERSION "2021-11-08"  =
       !!@ CRS=2169
       GEOMETRIE : MANDATORY SURFACE WITH (STRAIGHTS) VERTEX ZOA_TA.LUREF WITHOUT OVERLAPS>0;
       CATEGORIE (FINAL) : MANDATORY (
-        /** Catégorie 2 à définir
-         */
-        Cat2(
-          /** Sous-Catégorie 2.1 à définir
-           */
-          SubCat1
-        ),
-        /** Catégorie 1 à définir
-         */
-        Cat1
+        Amenagement,
+        Bati,
+        Infrastructure,
+        Autre
       );
-      NOM_FICHIER : TEXT;
+      NOM_FICHIER : MANDATORY TEXT;
       GENRE : TEXT;
-      PROFONDEUR_AMENAGEE : MANDATORY 0.00 .. 100.00;
+      MIN_PROFONDEUR_AMENAGEE : MANDATORY 0.00 .. 100.00;
+      MAX_PROFONDEUR_AMENAGEE : MANDATORY 0.00 .. 100.00;
       DESCRIPTION : MTEXT;
       ID_TA_POLY : MANDATORY 0 .. 99999999;
     END ZOA_TERRAIN_AMENAGE_POLY;

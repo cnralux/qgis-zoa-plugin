@@ -10,9 +10,9 @@
 name=ZOA Luxembourg
 qgisMinimumVersion=3.0
 description=Gestion de la ZOA du Grand-Duche de Luxembourg
-version=1.0
-author=CNRA, arx iT
-email=ta-upload@cnra.etat.lu
+version=1.01
+author=INRA, arx iT
+email=ta-upload@inra.etat.lu
 
 about=Gestion de la ZOA du Grand-Duche de Luxembourg
 

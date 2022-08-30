@@ -1,7 +1,8 @@
 '''
 Created on 1 mai 2021
+Edited on 30 august 2022
 
-@author: CNRA, arxit
+@author: INRA, arxit
 '''
 from __future__ import absolute_import
 
@@ -148,7 +149,7 @@ class DataChecker(object):
             layer_field_name, layer_field_type = self._getNativeField(native_fields, field.name)
             found = False
             for xsd_type, qgis_type in self.XSD_QGIS_ALLOWED_DATATYPE_MAP:
-                if layer_field_type == qgis_type and field.type == xsd_type:
+                if layer_field_type.lower() == qgis_type.lower() and field.type.lower() == xsd_type.lower():
                     found = True
                     break
 

@@ -10,7 +10,7 @@
   <xsd:appinfo source="http://www.interlis.ch/ili2c">
     <ili2c:model>ZOA_TA</ili2c:model>
     <ili2c:modelVersion>2021-11-08</ili2c:modelVersion>
-    <ili2c:modelAt>mailto:ta-upload@cnra.etat.lu</ili2c:modelAt>
+    <ili2c:modelAt>mailto:ta-upload@inra.etat.lu</ili2c:modelAt>
   </xsd:appinfo>
 </xsd:annotation>
 <xsd:import namespace="http://www.opengis.net/gml/3.2"/>

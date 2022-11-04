@@ -9,7 +9,7 @@
   <xsd:appinfo source="http://www.interlis.ch/ili2c/ili2cversion">5.1.4-74358b39131185c7a0b8dd2e9c5a5b548a9f385a</xsd:appinfo>
   <xsd:appinfo source="http://www.interlis.ch/ili2c">
     <ili2c:model>ZOA_TA</ili2c:model>
-    <ili2c:modelVersion>2021-11-08</ili2c:modelVersion>
+    <ili2c:modelVersion>2022-09-16</ili2c:modelVersion>
     <ili2c:modelAt>mailto:ta-upload@inra.etat.lu</ili2c:modelAt>
   </xsd:appinfo>
 </xsd:annotation>
@@ -225,8 +225,7 @@
         <xsd:element name="CATEGORIE">
           <xsd:simpleType>
             <xsd:restriction base="xsd:normalizedString">
-              <xsd:enumeration value="Amenagement"/>
-              <xsd:enumeration value="Bati"/>
+              <xsd:enumeration value="Construction"/>
               <xsd:enumeration value="Infrastructure"/>
               <xsd:enumeration value="Autre"/>
             </xsd:restriction>
@@ -288,8 +287,7 @@
         <xsd:element name="CATEGORIE">
           <xsd:simpleType>
             <xsd:restriction base="xsd:normalizedString">
-              <xsd:enumeration value="Amenagement"/>
-              <xsd:enumeration value="Bati"/>
+              <xsd:enumeration value="Construction"/>
               <xsd:enumeration value="Infrastructure"/>
               <xsd:enumeration value="Autre"/>
             </xsd:restriction>
@@ -351,8 +349,7 @@
         <xsd:element name="CATEGORIE">
           <xsd:simpleType>
             <xsd:restriction base="xsd:normalizedString">
-              <xsd:enumeration value="Amenagement"/>
-              <xsd:enumeration value="Bati"/>
+              <xsd:enumeration value="Construction"/>
               <xsd:enumeration value="Infrastructure"/>
               <xsd:enumeration value="Autre"/>
             </xsd:restriction>

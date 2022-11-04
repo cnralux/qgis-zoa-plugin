@@ -9,6 +9,7 @@ from builtins import object
 import os
 import shutil
 import uuid
+import zipfile
 from xml.dom.minidom import *
 
 from qgis.core import *
@@ -24,7 +25,6 @@ class ExportGML(object):
     '''
     Main class for the export data widget
     '''
-
 
 
     def __init__(self):
@@ -72,6 +72,9 @@ class ExportGML(object):
         gml_directory = os.path.dirname(gml_filename)
         temp_dir = os.path.join(gml_directory, str(uuid.uuid1()))
         os.makedirs(temp_dir)
+
+        zip_filename = gml_filename.rsplit('.', 1)[0] + '.zip'
+        zipfile.ZipFile(zip_filename, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9)
 
         # Progress bar
         progressMessageBar = ZOALuxembourg.main.qgis_interface.messageBar().createMessage(QCoreApplication.translate('ExportGML','Exporting to GML'))
@@ -133,7 +136,7 @@ class ExportGML(object):
                                                                        'STRIP_PREFIX=TRUE',
                                                                        'SPACE_INDENTATION=NO'])
 
-            members = self._getXsdCompliantGml(filename, gml, type)
+            members = self._getXsdCompliantGml(filename, gml, type, zip_filename)
 
             if type.topic() not in topic_baskets:
                 basket = gml.createElement('ili:baskets')
@@ -150,10 +153,14 @@ class ExportGML(object):
 
             progress.setValue(progress.value() + 1)
 
+
         file = open(gml_filename, 'wb')
         pretty_gml = gml.toprettyxml('', '\n', 'utf-8')
         file.write(pretty_gml.replace(b'xsi:nil="true"', b''))
         file.close()
+        with zipfile.ZipFile(zip_filename, 'a') as zf:
+            zf.write(gml_filename, arcname=os.path.basename(gml_filename))
+            zf.close()
         shutil.rmtree(temp_dir)
 
         # Messages display for number of selected entities
@@ -171,7 +178,7 @@ class ExportGML(object):
                                                                        QCoreApplication.translate('ExportGML_many','GML export was successful with {} selected entities in ZOA MODIFICATION layer').format(entity_count_ZOA))
 
 
-    def _getXsdCompliantGml(self, filename, gml, xsdtype):
+    def _getXsdCompliantGml(self, filename, gml, xsdtype, zip_filename):
         '''
         Transform the OGR gml to a XSD compliant GML
 
@@ -188,6 +195,7 @@ class ExportGML(object):
         xml_root = parse(filename) # parse an XML file by name
 
         feature_members = xml_root.getElementsByTagName('featureMember')
+        gmldir = os.path.split(os.path.split(filename)[0])
 
         for feature_member in feature_members:
             #Create member element
@@ -202,6 +210,12 @@ class ExportGML(object):
                 elements = feature_member.getElementsByTagName(fieldname)
                 if len(elements)>0:
                     element = elements[0]
+
+                if fieldname == "NOM_FICHIER":
+                    #shutil.copy(os.path.join(gmldir[0], element.childNodes[0].data), gmldir[0])
+                    with zipfile.ZipFile(zip_filename, 'a') as zf:
+                        zf.write(os.path.join(gmldir[0], element.childNodes[0].data), arcname=os.path.basename(os.path.join(gmldir[0], element.childNodes[0].data)))
+                        zf.close()
 
                 # Process geometry fields
                 if fieldname == xsdtype.geometry_fieldname:

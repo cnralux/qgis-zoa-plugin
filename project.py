@@ -640,7 +640,7 @@ class Project(QObject):
                 if field.name.startswith(fileField):
                     editor = 'ExternalResource'
                     config = {
-                        'RelativeStorage': 1
+                        'RelativeStorage': 0
                     }
 
                     #editor = 'SimpleFilename'

@@ -1,8 +1,8 @@
 INTERLIS 2.3;
 
 MODEL ZOA_TA (en)
-AT "mailto:ta-upload@cnra.etat.lu"
-VERSION "2021-11-08"  =
+AT "mailto:ta-upload@inra.etat.lu"
+VERSION "2022-09-16"  =
 
   DOMAIN
 
@@ -357,8 +357,7 @@ VERSION "2021-11-08"  =
       !!@ CRS=2169
       GEOMETRIE : MANDATORY POLYLINE WITH (STRAIGHTS) VERTEX ZOA_TA.LUREF;
       CATEGORIE (FINAL) : MANDATORY (
-        Amenagement,
-        Bati,
+        Construction,
         Infrastructure,
         Autre
       );
@@ -376,8 +375,7 @@ VERSION "2021-11-08"  =
       !!@ CRS=2169
       GEOMETRIE : MANDATORY ZOA_TA.LUREF;
       CATEGORIE (FINAL) : MANDATORY (
-        Amenagement,
-        Bati,
+        Construction,
         Infrastructure,
         Autre
       );
@@ -395,8 +393,7 @@ VERSION "2021-11-08"  =
       !!@ CRS=2169
       GEOMETRIE : MANDATORY SURFACE WITH (STRAIGHTS) VERTEX ZOA_TA.LUREF WITHOUT OVERLAPS>0;
       CATEGORIE (FINAL) : MANDATORY (
-        Amenagement,
-        Bati,
+        Construction,
         Infrastructure,
         Autre
       );

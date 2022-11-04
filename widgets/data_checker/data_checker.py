@@ -301,6 +301,11 @@ class DataChecker(object):
             if xsd_field.listofvalues is not None:
                 if text_value not in xsd_field.listofvalues:
                     errors.append((feature, xsd_field, QCoreApplication.translate('DataChecker', 'Text ({}) not in field list of values').format(text_value)))
+            
+            # Check file exists
+            if xsd_field.name == "NOM_FICHIER":
+                if os.path.exists(text_value) == False:
+                    errors.append((feature, xsd_field, QCoreApplication.translate('DataChecker', 'File ({}) does not exist').format(text_value)))
 
         return errors
 

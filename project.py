@@ -534,7 +534,7 @@ class Project(QObject):
                 break
 
         if not ortho_found:
-            ortho_layer = QgsRasterLayer(ortho_url, 'Orthophoto 2019', 'wms')
+            ortho_layer = QgsRasterLayer(ortho_url, 'Orthophoto Luxembourg', 'wms')
             QgsProject.instance().addMapLayer(ortho_layer, False)
             QgsProject.instance().layerTreeRoot().addLayer(ortho_layer)
             main.qgis_interface.mapCanvas().setExtent(ortho_layer.extent())
